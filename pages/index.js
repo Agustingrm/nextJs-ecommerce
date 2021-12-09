@@ -1,3 +1,3 @@
-export default function HomePage() {
-  return <p>Hello World</p>;
-}
+import ProductsPage from './products';
+
+export default ProductsPage;
