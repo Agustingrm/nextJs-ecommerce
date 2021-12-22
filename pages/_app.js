@@ -9,11 +9,11 @@ Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
 Router.events.on('routeChangeError', () => NProgress.done());
 
-function MyApp({ Component, PageProps, apollo }) {
+function MyApp({ Component, pageProps, apollo }) {
   return (
     <ApolloProvider client={apollo}>
       <Page>
-        <Component {...PageProps} />
+        <Component {...pageProps} />
       </Page>
     </ApolloProvider>
   );
