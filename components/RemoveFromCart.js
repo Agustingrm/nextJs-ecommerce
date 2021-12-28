@@ -29,12 +29,12 @@ export default function RemoveFromCart({ id }) {
   const [removeFromCart, { loading }] = useMutation(REMOVE_FROM_CART_MUTATION, {
     variables: { id },
     update,
-    optimisticResponse: {
-      deleteCartItem: {
-        __typename: 'CartItem',
-        id,
-      },
-    },
+    // optimisticResponse: {
+    //   deleteCartItem: {
+    //     __typename: 'CartItem',
+    //     id,
+    //   },
+    // },
   });
   return (
     <BigButton
