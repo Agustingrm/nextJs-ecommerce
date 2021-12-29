@@ -21,7 +21,8 @@ export default function Nav() {
             My cart
             <CartCount
               count={user.cart.reduce(
-                (acc, cartItem) => acc + cartItem.quantity,
+                (acc, cartItem) =>
+                  acc + (cartItem.quantity ? cartItem.quantity : 0),
                 0
               )}
             />
