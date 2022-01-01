@@ -42,9 +42,9 @@ describe('<CreateProduct />', () => {
       item.description
     );
     // 3. Check that those boxes are populated
-    expect(screen.getAllByDisplayValue(item.name)).toBeInTheDocument();
-    expect(screen.getAllByDisplayValue(item.price)).toBeInTheDocument();
-    expect(screen.getAllByDisplayValue(item.description)).toBeInTheDocument();
+    expect(screen.getByDisplayValue(item.name)).toBeInTheDocument();
+    expect(screen.getByDisplayValue(item.price)).toBeInTheDocument();
+    expect(screen.getByDisplayValue(item.description)).toBeInTheDocument();
   });
   it('creates the items when the form is submitted', async () => {
     // Creates the mocks for this test

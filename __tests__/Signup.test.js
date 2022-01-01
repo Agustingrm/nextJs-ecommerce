@@ -59,7 +59,7 @@ describe('<Signup />', () => {
     // Click the submit
     await userEvent.click(screen.getByText('Sign Up!'));
     await screen.findByText(
-      `Signed up with ${me.email} - Please Go Head and Sign In!`
+      `Signed up with ${me.email} - Please Go Head and Sign in!`
     );
   });
 });
