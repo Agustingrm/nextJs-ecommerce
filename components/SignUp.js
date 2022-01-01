@@ -89,8 +89,10 @@ export default function SignUp() {
             onChange={handleChange}
           />
         </label>
-        <button type="submit">Sign in!</button>
+        <button type="submit">Sign Up!</button>
       </fieldset>
     </Form>
   );
 }
+
+export { SIGNUP_MUTATION };

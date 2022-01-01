@@ -38,13 +38,13 @@ export default function Search() {
   const findItemsButChill = debounce(findItems, 350);
   resetIdCounter();
   const {
+    isOpen,
     inputValue,
     getMenuProps,
     getInputProps,
     getComboboxProps,
     getItemProps,
     highlightedIndex,
-    isOpen,
   } = useCombobox({
     items,
     onInputValueChange() {
@@ -78,7 +78,7 @@ export default function Search() {
           items.map((item, index) => (
             <DropDownItem
               key={item.id}
-              {...getItemProps({ item })}
+              {...getItemProps({ item, index })}
               highlighted={index === highlightedIndex}
             >
               <img
